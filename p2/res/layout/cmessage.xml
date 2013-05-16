@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100" 
+    android:padding="20dp"    android:background="@drawable/lighthouse2">
+
+    
+    <TextView  android:textColor="#C9FFD1"
+        android:id="@+id/component_name"
+      android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_weight="40" />
+   
+    <ListView  android:textColor="#C9FFD1"
+        android:id="@+id/message_list"
+      android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:layout_weight="20" >
+    </ListView>
+
+    <Button android:textColor="#C9FFD1"
+        android:id="@+id/compose"
+      android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:minWidth="264dip"
+        android:text="Email Alert!" 
+        android:layout_weight="40"/>
+    
+
+</LinearLayout>

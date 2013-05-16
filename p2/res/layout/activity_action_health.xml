@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/lighthouse"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:screenOrientation="portrait"
+    tools:context=".ActionHealth" >
+
+    <!-- android:background="@drawable/lighthouse" -->
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="214dp"
+        android:layout_height="82dp"
+        android:layout_gravity="center"
+        android:background="@drawable/actiono"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="25dp" />
+
+    <!-- android:text="Welcome to Actionogram!" -->
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="136dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:minWidth="100dp" />
+
+    <TextView
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="15"
+        android:gravity="center"
+        android:text="Loading..."
+        android:textColor="#C9FFD1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/DisplayHealth"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/risk_select" />
+
+        <Button
+            android:id="@+id/bReload"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="@drawable/reload" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bSupportTeam"
+        android:layout_width="231dp"
+        android:layout_height="68dp"
+        android:layout_gravity="center"
+        android:text="Report this to support team!"
+        android:textColor="#C9FFD1" />
+
+</LinearLayout>

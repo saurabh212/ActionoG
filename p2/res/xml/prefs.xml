@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <EditTextPreference
+        android:key="name"
+        android:summary="Enter your Paypal name"
+        android:title="PayPal name"
+        android:defaultValue="Mehrotra, Saurabh" />
+    <EditTextPreference
+        android:key="manual"
+        android:summary="Enter a different URL link"
+        android:title="Manual URL Link"
+        android:defaultValue="https://dl.dropboxusercontent.com/u/32902686/Actionogram/type%20prob%20name.json" />
+
+    <CheckBoxPreference
+        android:key="checkbox"
+        android:summary="Tick for using custom URL. No Tick for using preconfigured list"
+        android:title="Tick for Manual URL" />
+
+    <ListPreference
+        android:entries="@array/list"
+        android:key="list"
+        android:summary= "Choose URL list"
+        android:title= "preconfigured URL List"
+        android:entryValues="@array/values"/>
+</PreferenceScreen>

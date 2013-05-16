@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lighthouse2"
+    android:baselineAligned="true"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:textColor="#C9FFD1"
+    android:weightSum="100" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="15" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To (email):"
+                android:textColor="#C9FFD1" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/etEmails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="samehrotra@paypal.com"
+                android:textColor="#C9FFD1" >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subject:"
+                android:textColor="#C9FFD1" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/etIntro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="a word or two"
+                android:textColor="#C9FFD1" >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Receiver's name"
+                android:textColor="#C9FFD1" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TEAM"
+                android:textColor="#C9FFD1" >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brief Description"
+                android:textColor="#C9FFD1" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/etThings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#C9FFD1"
+                android:text="This troubling component was tracked with following message(s)." >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What action would you suggest to the receiver?"
+                android:textColor="#C9FFD1" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/etAction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Take necessary actions."
+                android:textColor="#C9FFD1" >
+            </EditText>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout  android:layout_weight="85"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <Button
+            android:id="@+id/bSentEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:text="Send Email"
+            android:textColor="#C9FFD1" >
+        </Button>
+
+        <AnalogClock
+            android:id="@+id/analogClock1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50" >
+        </AnalogClock>
+    </LinearLayout>
+
+</LinearLayout>

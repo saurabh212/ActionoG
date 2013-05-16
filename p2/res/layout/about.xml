@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lighthouse"
+    android:orientation="vertical" >
+   
+        <TextView
+            android:id="@+id/aboutMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#C9FFD1"
+            android:text="The ACTIONOGRAM mobile app will give a quick visual snapshot of the health of the inbound and outbound connections/components of the Risk-Actions framework. The health is indicated by the colors (red/green/yellow). It also includes an alert mechanism to the app users and the respective teams. In gist, this mobile app helps to monitor the Risk-Actions interfaces effectively in real-time at our finger tips." />
+    
+
+</LinearLayout>

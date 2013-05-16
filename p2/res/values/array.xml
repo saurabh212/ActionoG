@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list">
+        <item> URL 1:  All Green!</item>
+        <item >URL 2:  Few Red</item>
+        <item> URL 3:  Message details</item>
+        <item >URL 4:</item>
+</string-array>
+    <string-array name="values">
+        <item >1</item>
+        <item >2</item>
+        <item >3</item>
+        <item >4</item>
+    </string-array>
+    
+</resources>
