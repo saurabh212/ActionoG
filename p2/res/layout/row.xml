@@ -13,14 +13,18 @@
         android:id="@+id/tvrow"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="90"
-        android:textColor="#C9FFD1" />
+        android:layout_weight="78"
+        android:fontFamily="Tahoma"
+        android:text="disputecoreintegrationserv"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/myfont"
+        android:typeface="sans" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_gravity="center"
-        android:layout_weight="5"
+        android:layout_weight="20"
         android:gravity="center"
         android:weightSum="100" >
 

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="mydark">#000480</color>
+    <color name="myfont">#C9FFD1</color>
+
 </resources>

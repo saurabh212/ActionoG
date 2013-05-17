@@ -72,8 +72,8 @@ public class ListOnScreen extends Activity implements OnItemClickListener,
 		level += 1;
 
 		try {
-			if (passNode.children.size() != 0) {// if the selected node is type
-												// domain
+			if (passNode.children.size() != 0) {
+				// if the selected node is type domain
 				passList = passNode.children;
 				ListViewSet();
 			} else {

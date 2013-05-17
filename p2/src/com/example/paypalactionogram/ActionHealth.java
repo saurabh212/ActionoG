@@ -40,7 +40,7 @@ public class ActionHealth extends Activity implements OnClickListener {
 			"https://dl.dropboxusercontent.com/u/32902686/Actionogram/email%2Barrows%2Bmessage%2Bdictionary.json",
 			"https://dl.dropboxusercontent.com/u/32902686/Actionogram/email%2Barrows%2Bmessage%2Bdictionary%2Bstatuses.json",
 			"https://dl.dropboxusercontent.com/u/32902686/Actionogram/type%20prob%20name.json", 
-			" " 		};
+			"http://10.239.64.77/html/scrap/actiongram/data.json" 		};
 	
 	/*
 	 *  fetch JSON object data in form of string from the url
@@ -90,7 +90,7 @@ public class ActionHealth extends Activity implements OnClickListener {
 	private void preferencesFetch() {
 		preferredUrls = PreferenceManager.getDefaultSharedPreferences( getBaseContext() );
 		PayPalname = preferredUrls.getString("name", "Mehrotra, Saurabh");		
-		ManualLink = preferredUrls.getString("manual", "https://dl.dropboxusercontent.com/u/32902686/Actionogram/type%20prob%20name.json");
+		ManualLink = preferredUrls.getString("manual", "https://dl.dropboxusercontent.com/u/32902686/Actionogram/123.json");
 		useManual = preferredUrls.getBoolean( "checkbox", false );
 		if( useManual ){
 			URL = ManualLink;
@@ -98,6 +98,7 @@ public class ActionHealth extends Activity implements OnClickListener {
 		else{
 			URL = List [ (int) (Integer.parseInt( preferredUrls.getString("list", "1") ) - 1)] ;
 		}
+		
 	}
 
 	private void Initialize( ) {

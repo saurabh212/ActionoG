@@ -30,6 +30,7 @@
         android:layout_width="136dp"
         android:layout_height="36dp"
         android:layout_gravity="center"
+        android:soundEffectsEnabled="true"
         android:minWidth="100dp" />
 
     <TextView

@@ -16,6 +16,7 @@ public final class R {
     }
     public static final class color {
         public static final int mydark=0x7f060000;
+        public static final int myfont=0x7f060001;
     }
     public static final class drawable {
         public static final int actiono=0x7f020000;
@@ -116,11 +117,12 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f080000;
+        public static final int AppBaseTheme=0x7f080001;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f080001;
+        public static final int AppTheme=0x7f080002;
+        public static final int TextContactContactName=0x7f080000;
     }
     public static final class xml {
         public static final int prefs=0x7f040000;

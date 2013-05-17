@@ -8,6 +8,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.HttpResponseException;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.conn.HttpHostConnectException;
 import org.apache.http.impl.client.DefaultHttpClient;
 import java.net.URISyntaxException;
 
@@ -64,6 +65,16 @@ public class GetMethodEx extends AsyncTask< String, Integer, String > {
 			activity.Go.setVisibility( android.view.View.VISIBLE );
 			activity.reLoad.setVisibility( android.view.View.VISIBLE );
 		}
+
+		else if( result == null ){
+			activity.supportTeam.setVisibility( android.view.View.VISIBLE );
+			activity.screenStatus.setText("Data Not Found. Please check url/ contact support team");
+		}
+		else if( result.equals("http")){
+			activity.supportTeam.setVisibility( android.view.View.VISIBLE );
+			activity.screenStatus.setText("Failed to connect to URL. Check if it is working/ accessible.");
+
+		}
 		else{
 			activity.supportTeam.setVisibility( android.view.View.VISIBLE );
 			activity.screenStatus.setText("Data Not Found. Please check url/ contact support team");
@@ -73,11 +84,14 @@ public class GetMethodEx extends AsyncTask< String, Integer, String > {
 	private String connectOverUrlAndObtainJsonString( String para ) {
 		client = new DefaultHttpClient( );		
 		try {
-			
+			HttpResponse response = null;
 			website = new URI( para );
 			HttpGet request = new HttpGet( );
 			request.setURI( website );
-			HttpResponse response = client.execute( request );
+			
+				response = client.execute( request );
+			
+			
 			
 			publishProgress ( 40 );
 			in = new BufferedReader( new InputStreamReader( response.getEntity( ).getContent() ) );
@@ -98,14 +112,21 @@ public class GetMethodEx extends AsyncTask< String, Integer, String > {
 			}
 			//throw new HttpResponseException(404, "OK");
 			
-		}
-			//activity.screenStatus.setText( "Sorry! Server is either down or not reachable. Come back Later!" );
-		 catch (URISyntaxException e) {
-			//activity.screenStatus.setText( "Incorrect URL! Check in preference settings." );
-		} catch (IllegalStateException e) {
+		}catch( HttpHostConnectException e )
+		{
 			e.printStackTrace();
+			return "http";
+			//activity.screenStatus.setText( "Sorry! Server is either down or not reachable. Come back Later!" );
+		} catch (URISyntaxException e) {
+			e.printStackTrace();
+			return null;
+			//activity.screenStatus.setText( "Incorrect URL! Check in preference settings." );
+		} catch (IllegalStateException e) {			
+			e.printStackTrace();
+			return null;
 		} catch (IOException e) {
 			e.printStackTrace();
+			return null;
 		}
 		return data;
 	}
